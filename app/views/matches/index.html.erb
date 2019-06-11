@@ -1,0 +1,9 @@
+<ul class="List-Matches">
+    <% @matches.each do |match| %>
+        <div class="Container"> 
+            <p> <%= match.date %> </p> 
+            <p> <%= match.country_1.name %> </p>
+            <p> <%= match.country_2.name %> </p>
+        </div>
+    <% end %>
+</ul>
