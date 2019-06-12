@@ -1,6 +1,6 @@
 class MatchesController < ApplicationController
   def index
-    @matches = Match.all
+    @matches = Match.all.includes(:country_1, :country_2)
   end
 
   def show
@@ -9,14 +9,12 @@ class MatchesController < ApplicationController
 
   def create
     match = Match.create(match_params)
-
     redirect_to matches_path
   end
 
   def update
     @match = Match.find(params[:id])
     @match.update(match_params)
-
     redirect_to matches_path(@match)
   end
 
