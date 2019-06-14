@@ -27,4 +27,10 @@ describe Match do
   it "is not valid without phase" do
     expect(Match.new(date: Time.now, country_1_id: @c1.id, country_2_id: @c2.id, group: 'First')).not_to be_valid
   end
+  it "country 1 is missed" do
+    @match = Match.new(date: Time.now, country_1_id: @c1.id, country_2_id: @c2.id, group: 'First', phase: 'First')
+    @c1.delete
+    expect(@match.country_1).to be_nil
+    expect(@match.country_2).not_to be_nil
+  end
 end
