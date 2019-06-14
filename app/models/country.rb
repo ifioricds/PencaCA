@@ -1,3 +1,6 @@
 class Country < ApplicationRecord
-    has_many :matches
+    validates_presence_of :name
+    def matches
+        Match.matches(self.id)        
+    end
 end

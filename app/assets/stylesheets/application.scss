@@ -10,6 +10,20 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+ @import "bootstrap";
+ .border {
+    border-right: 1px solid black;
+  }
+.link_color:hover{
+    background: #1CB94E;
+    color: #0000FF !important;
+}
+
+.link_color {
+    color: black !important;
+}
+
+.m-5 {
+    margin: ($spacer * .5) !important;
+}
