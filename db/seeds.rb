@@ -40,3 +40,4 @@ Match.create(date: '2019-06-21 20:00:00', country_1_id: '11', country_2_id: '10'
 Match.create(date: '2019-06-24 20:00:00', country_1_id: '10', country_2_id: '9', phase: 'grupos', group: 'C')
 Match.create(date: '2019-06-24 20:00:00', country_1_id: '11', country_2_id: '12', phase: 'grupos', group: 'C')
 
+User.create!(:email=>'admin@example.com', :password=>'password')
