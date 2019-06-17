@@ -1,5 +1,6 @@
 class Country < ApplicationRecord
+    validates_presence_of :name
     def matches
-        Match.where("country_1_id = ? OR country_2_id = ?", self.id, self.id)
+        Match.matches(self.id)        
     end
 end
